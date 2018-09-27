@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+	<nav class="header">
+		<ul class="list">
+		<li class="logo">
+			<a href="/">liuyan</a>
+		</li>
+		<li>
+			<a href="/">首页</a>
+		</li>
+		<li>
+			<a href="/login">登录</a>
+		</li>
+		<li>
+			<a href="/reg">注册</a>
+		</li>
+	</ul>
+</nav>
+<div class="container">
+	<main class="main">
+		<section class="intro"><!--如果用户登录或者注册成功并且没有在登录状态下点击注册或者登录-->
+			<h1 class="welcome">欢迎来到 留言板</h1>
+			<h3 class="tech">这是一个留言板</h3>
+			<p class="btnlist">
+				<a href="/login" class="login">登录</a>
+				<a href="/reg" class="register">立即注册</a></p>
+				<!--if user--><!--    form.submitform(method='get',action='user/#{user}')--><!--        input.article(type='text',name='article',id='article',placeholder='说出你此刻的想法...')--><!--        input.submit(type='submit',name='submit',value='发表')-->
+ 		</section>
+        <section class="show">
+			<ul>
+			<each>val in</each>
+			</ul>
+		</section>
+</main>
+<hr>
+<div class="content">
+  <!-- content -->
+</div>
+<div class="footer">footer</div>
+.content {
+  min-height: calc(100vh - 70px);
+}
+.footer {
+  height: 50px;
+}
+
+
+</div></body></html>
