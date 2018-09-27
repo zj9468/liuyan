@@ -6,29 +6,31 @@ block content
                 h4.indexmes #{message}
             //如果用户登录或者注册成功并且没有在登录状态下点击注册或者登录
             if success&&user
-                h4.welcome #{success}，欢迎 #{user} 来到 留言
+                h4.welcome #{success}，欢迎 #{user} 来到 留言板
             else if !success&&user
                 h4.welcome 欢迎 #{user} 来到 留言板
             else
-                h4.welcome 欢迎来到 留言
+                h4.welcome 欢迎来到 留言板
             h4.tech liuyan是一个基于Node.js,使用express4.16.0以及MongoDB搭建起来的留言系统。
+            <br/>
             p.btnlist
                 if user
-                    a.login(href='/logout') 退出
-                    a.userlink(href='/users/#{user}') 发表文章
-                else
-                    a.login(href='/login') 登录
-                    a.register(href='/reg') 立即注册
+                    a.userlink(href='/users/#{user}') 我要留言
+                
             //if user
             //    form.submitform(method='get',action='user/#{user}')
             //        input.article(type='text',name='article',id='article',placeholder='说出你此刻的想法...')
             //        input.submit(type='submit',name='submit',value='发表')
         section.show
-            each val in posts
-                article.col
+           ul
+               each val in posts
+                  article.col
                     h3.author
-                    #{val.user} &nbsp&nbsp&nbsp&nbsp #{val.updated}
-                       p #{val.post}
+                     li="用戶: "+val.user
+                     li="時間: "+val.updated
+                     li="内容: "+val.post
+                    
+
                     
                    
 

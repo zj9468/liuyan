@@ -10,8 +10,11 @@ html
                   a(href='/') liuyan
               li
                   a(href='/') 首页
-              li
-                  a(href='/login') 登录
+              li              
+                if user
+                  a(href='/logout') 退出
+                else
+                  a(href='/login') 登录                
               li
                   a(href='/reg') 注册
        div.container
@@ -19,5 +22,5 @@ html
            hr
            footer.footer
                p
-                   a(href='http://zhoujie.coding.io') zhoujie
-                   | @2018
+                  a(href='https://github/zj9468/liuyan') zhoujie
+                  | @2018
